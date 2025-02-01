@@ -14,14 +14,19 @@ This project leverages agentic AI, the yfinance library, DuckDuckGo search tools
  # Below are the screen shots of my project
 
  ![Agentic1](https://github.com/user-attachments/assets/9fcb9256-ef09-49e2-882d-00395edb64b5)
+                       1. Import the necessary Libraries
 
  ![Agentic2](https://github.com/user-attachments/assets/c68445a2-a860-4317-9bdc-f0c6f133b7af)
+                       2. check the GROQ_API_KEY is availbleor not
 
  ![Agentic3](https://github.com/user-attachments/assets/26dcb974-2588-491e-99ac-9dc8b4b7d0d6)
+                       3. Create the web search agent 
 
  ![Agentic4](https://github.com/user-attachments/assets/a3984788-54c7-44d6-b2a5-9b624476266e)
+                       4. Create the finance agent tool
 
  ![Agentic6](https://github.com/user-attachments/assets/fd6b95b1-cf9f-46be-8d7b-2e6ea55f25ac)
+                       5.  Create the multi agent by combining the web search agent and finance agent
 
 
 
