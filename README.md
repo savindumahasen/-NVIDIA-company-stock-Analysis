@@ -1,2 +1,2 @@
 # Financial-Agent-for-NVIDIA-stock-analysis
-For creating this project mainly use agentic AI, and phidata framework. Main aim of this project is anlyze the stock of NVIDIA company
+This project leverages agentic AI, the yfinance library, DuckDuckGo search tools, and the Phidata framework to analyze NVIDIA's stock performance. The main objective is to provide real-time insights, including stock prices, financial fundamentals, and relevant news. 
