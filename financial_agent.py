@@ -24,7 +24,7 @@ finance_agent = Agent(
     tools=[YFinanceTools(stock_price=True, analyst_recommendations=True, stock_fundamentals=True,
                          company_news=True)],
     instructions=["Use table to display the data"],
-    show_tool_calls=True,
+    show_tool_calls=False,
     markdown=True
 )
 
@@ -36,9 +36,9 @@ multi_ai_agent = Agent(
         "Use the web search agent to find information about the company and the financial agent to find information about the stock.",
         "Use a table to display the data."
     ],
-    show_tool_calls=True,
+    show_tool_calls=False,
     markdown=True
 )
 
 
-multi_ai_agent.print_response("Summarize analyst recommendation and news for NVDA",stream=True)
+multi_ai_agent.print_response("what are the latest news of NVidia and please provide the recommeded  items of NVIDIA",stream=True)
