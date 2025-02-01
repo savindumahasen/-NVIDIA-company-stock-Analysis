@@ -28,7 +28,7 @@ This project leverages agentic AI, the yfinance library, DuckDuckGo search tools
  ![Agentic6](https://github.com/user-attachments/assets/fd6b95b1-cf9f-46be-8d7b-2e6ea55f25ac)
                        5.  Create the multi agent by combining the web search agent and finance agent
 
-Responses or final outcome  based on the above image (image5) question is shown below
+Responses or final outcome  based on the above question mentioned in image 5
 ![response1](https://github.com/user-attachments/assets/1f2bd09b-4ed4-422f-8d1e-ff657dcddef5)
 
 ![respose2](https://github.com/user-attachments/assets/2483e074-cc6b-4a93-9f55-dcd2da5f2890)
