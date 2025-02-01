@@ -41,4 +41,4 @@ multi_ai_agent = Agent(
 )
 
 
-multi_ai_agent.print_response("what are the latest news of NVidia and please provide the recommeded  items of NVIDIA",stream=True)
+multi_ai_agent.print_response("Please provide  stock item of NVIDIA",stream=True)
