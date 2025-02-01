@@ -1,3 +1,7 @@
+![image](https://github.com/user-attachments/assets/e122fb47-e1d3-4122-8935-572cf683c4f9)  ![image](https://github.com/user-attachments/assets/2e1cb363-90fb-41d3-bd6a-7c14afd6e3f1)
+
+
+
 # Financial-Agent-for-NVIDIA-stock-analysis
 This project leverages agentic AI, the yfinance library, DuckDuckGo search tools, and the Phidata framework to analyze NVIDIA's stock performance. The main objective is to provide real-time insights, including stock prices, financial fundamentals, and relevant news. 
 
