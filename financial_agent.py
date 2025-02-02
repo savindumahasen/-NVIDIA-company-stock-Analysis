@@ -49,23 +49,28 @@ finance_agent = Agent(
 )
 
 # Multi-Agent System
-multi_ai_agent = Agent(
-    team=[web_search, finance_agent],
-    model=Groq(id="Deepseek-R1-Distill-Llama-70b"),
-    instructions=[
-        "Use the web search agent to find information about the company and the financial agent to find stock details.",
-        "Use a table  and bar chat to display stock prices and fundamentals.",
-        "Do NOT provide responses containing sexual or inappropriate content.",
-        "Do Not provide responses containing actors and actress and professors and scientists and businessman and businesses and natural resources and places and volcanoes and trees and trenches and oceans and seas out of NVIDIA company or unnecessary content.",
-        "If a request contains inappropriate content or unnecessary content, respond with: 'Warning: This request violates content guidelines."
-    ],
-    show_tool_calls=False,
-    markdown=True
-)
+#multi_ai_agent = Agent(
+ #   team=[web_search, finance_agent],
+ #   model=Groq(id="Deepseek-R1-Distill-Llama-70b"),
+ #   instructions=[
+       # "Use the web search agent to find information about the company and the financial agent to find stock details.",
+       # "Use a table  and bar chat to display stock prices and fundamentals.",
+       # "Do NOT provide responses containing sexual or inappropriate content.",
+       # "Do Not provide responses containing actors and actress and professors and scientists and businessman and businesses and natural resources and places and volcanoes and trees and trenches and oceans and seas out of NVIDIA company or unnecessary content.",
+       # "If a request contains inappropriate content or unnecessary content, respond with: 'Warning: This request violates content guidelines."
+   # ],
+   # show_tool_calls=False,
+   # markdown=True
+#)
 
-try:
-    response = multi_ai_agent.print_response("Please provide the NVIDIA company information", stream=True)
-    print(response)  # Print response to console
-except Exception as e:
-    print(f"Error occurred: {e}")
+#try:
+    #response = multi_ai_agent.print_response("Please provide the NVIDIA company information", stream=True)
+    #print(response)  # Print response to console
+  
+#except Exception as e:
+   # print(f"Error occurred: {e}")
 
+app=Playground(agents=[finance_agent,web_search]).get_app()
+
+if __name__ == "__main__":
+    serve_playground_app("financial_agent:app",reload=True)
