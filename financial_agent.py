@@ -1,12 +1,17 @@
 import os
+import phi
+import phi.api
 from phi.agent import Agent
 from phi.model.groq import Groq
 from phi.tools.yfinance import YFinanceTools
 from phi.tools.duckduckgo import DuckDuckGo
 from dotenv import load_dotenv
-
+from phi.playground import Playground, serve_playground_app
 # Load environment variables
 load_dotenv()
+
+## Ensure API ky is set for Phi
+phi.api = os.getenv("PHI_API_KEY")
 
 # Ensure API Key is set for Groq (if required)
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")  # Make sure this is set in your .env file
@@ -33,7 +38,7 @@ web_search = Agent(
 finance_agent = Agent(
     name="Finance_agent",
     model=Groq(id="Deepseek-R1-Distill-Llama-70b"),
-    tools=[YFinanceTools(stock_price=True, analyst_recommendations=True, stock_fundamentals=True,
+    tools=[YFinanceTools(stock_price=True, analyst_recommendations=True, stock_fundamentals=True,company_info=True,
                          historical_prices=True,company_news=True)],
     instructions=["Use table and bar chart to display the data.",
                   "Do NOT provide responses containing sexual or inappropriate content.",
@@ -59,7 +64,7 @@ multi_ai_agent = Agent(
 )
 
 try:
-    response = multi_ai_agent.print_response("What are the recommandedn items of NVIDIA company for users", stream=True)
+    response = multi_ai_agent.print_response("Please provide the NVIDIA company information", stream=True)
     print(response)  # Print response to console
 except Exception as e:
     print(f"Error occurred: {e}")
