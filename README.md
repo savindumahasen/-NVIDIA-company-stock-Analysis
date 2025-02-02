@@ -2,7 +2,7 @@
 
 
 
-# Financial-Agent-for-NVIDIA-stock-analysis
+# NVIDIA-company-stock-analysis
 This project leverages agentic AI, the yfinance library, DuckDuckGo search tools, Deepseek-R1-Distill-Llama-70b LLM model and the Phidata framework to analyze NVIDIA's stock performance. The main objective is to provide real-time insights, including stock prices, financial fundamentals, and relevant news. 
 
 # Steps
