@@ -34,12 +34,12 @@ finance_agent = Agent(
     name="Finance_agent",
     model=Groq(id="Deepseek-R1-Distill-Llama-70b"),
     tools=[YFinanceTools(stock_price=True, analyst_recommendations=True, stock_fundamentals=True,
-                         company_news=True)],
+                         historical_prices=True,company_news=True)],
     instructions=["Use table and bar chart to display the data.",
                   "Do NOT provide responses containing sexual or inappropriate content.",
                   "If a request contains inappropriate content, respond with: 'Warning: This request violates content guidelines.",
                   "Do Not provide responses containing actors and actress and professors and scientists and businessman and businesses and natural resources and places and volcanoes and trees and trenches and oceans and seas out of NVIDIA company or unnecessary content."],
-    show_tool_calls=True,
+    show_tool_calls=False,
     markdown=True
 )
 
@@ -52,15 +52,14 @@ multi_ai_agent = Agent(
         "Use a table  and bar chat to display stock prices and fundamentals.",
         "Do NOT provide responses containing sexual or inappropriate content.",
         "Do Not provide responses containing actors and actress and professors and scientists and businessman and businesses and natural resources and places and volcanoes and trees and trenches and oceans and seas out of NVIDIA company or unnecessary content.",
-
         "If a request contains inappropriate content or unnecessary content, respond with: 'Warning: This request violates content guidelines."
     ],
-    show_tool_calls=True,
+    show_tool_calls=False,
     markdown=True
 )
 
 try:
-    response = multi_ai_agent.print_response("Please provide the items of NVIDIA company", stream=True)
+    response = multi_ai_agent.print_response("What are the recommandedn items of NVIDIA company for users", stream=True)
     print(response)  # Print response to console
 except Exception as e:
     print(f"Error occurred: {e}")
