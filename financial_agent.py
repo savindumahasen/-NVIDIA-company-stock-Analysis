@@ -24,7 +24,7 @@ web_search = Agent(
     instructions=["Always include sources",
                   "Do NOT provide responses containing sexual or inappropriate content.",
                   "If a request contains inappropriate content, respond with: 'Warning: This request violates content guidelines.",
-                  "Do Not provide responses containing actors and actress and professors and scientists and businessman and businesses and natural resources and places and companies and volcanoes and trees and trenches and oceans and seas out of NVIDIA company or unnecessary content."],
+                  "Do Not provide responses containing actors and actress and professors and scientists and businessman and businesses and natural resources and places and volcanoes and trees and trenches and oceans and seas out of NVIDIA company or unnecessary content."],
     show_tool_calls=True,
     markdown=True
 )
@@ -38,7 +38,7 @@ finance_agent = Agent(
     instructions=["Use table and bar chart to display the data.",
                   "Do NOT provide responses containing sexual or inappropriate content.",
                   "If a request contains inappropriate content, respond with: 'Warning: This request violates content guidelines.",
-                  "Do Not provide responses containing actors and actress and professors and scientists and businessman and businesses and natural resources and places and companies and volcanoes and trees and trenches and oceans and seas out of NVIDIA company or unnecessary content."],
+                  "Do Not provide responses containing actors and actress and professors and scientists and businessman and businesses and natural resources and places and volcanoes and trees and trenches and oceans and seas out of NVIDIA company or unnecessary content."],
     show_tool_calls=True,
     markdown=True
 )
@@ -51,7 +51,7 @@ multi_ai_agent = Agent(
         "Use the web search agent to find information about the company and the financial agent to find stock details.",
         "Use a table  and bar chat to display stock prices and fundamentals.",
         "Do NOT provide responses containing sexual or inappropriate content.",
-        "Do Not provide responses containing actors and actress and professors and scientists and businessman and businesses and natural resources and places and companies and volcanoes and trees and trenches and oceans and seas out of NVIDIA company or unnecessary content.",
+        "Do Not provide responses containing actors and actress and professors and scientists and businessman and businesses and natural resources and places and volcanoes and trees and trenches and oceans and seas out of NVIDIA company or unnecessary content.",
 
         "If a request contains inappropriate content or unnecessary content, respond with: 'Warning: This request violates content guidelines."
     ],
@@ -60,7 +60,7 @@ multi_ai_agent = Agent(
 )
 
 try:
-    response = multi_ai_agent.print_response("Please provide the NVIDIA company", stream=True)
+    response = multi_ai_agent.print_response("Please provide the items of NVIDIA company", stream=True)
     print(response)  # Print response to console
 except Exception as e:
     print(f"Error occurred: {e}")
