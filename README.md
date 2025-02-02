@@ -22,7 +22,7 @@ This project leverages agentic AI, the yfinance library, DuckDuckGo search tools
 11. After that click "what is your special skill"  option
 12. Then you  can seel like below
      ![Screenshot3](https://github.com/user-attachments/assets/4c5036be-e6ad-4020-9dde-4d142dca3a57)
-13. After that, you can ask  the question related to the NVIDIA company
+13. After that, you can type a question in prompt  and get the response related to the NVIDIA company
 
 
     
