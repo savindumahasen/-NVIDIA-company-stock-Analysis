@@ -30,7 +30,7 @@ web_search = Agent(
                   "Do NOT provide responses containing sexual or inappropriate content.",
                   "If a request contains inappropriate content, respond with: 'Warning: This request violates content guidelines.",
                   "Do Not provide responses containing bar chart and charts actors and actress and professors and scientists and businessman and businesses and natural resources and places and volcanoes and trees and trenches and oceans and seas out of NVIDIA company or unnecessary content.",
-                  "If a request contains inappropriate content or unnecessary content, and outside of NVIDIA company respond with: 'Warning: This request violates content guidelines."],
+                  "If a request contains inappropriate content or unnecessary content, and outside of NVIDIA company respond with: 'Warning: This request violates content guidelines.Feel free to ask regarding NVIDIA"],
     show_tool_calls=True,
     markdown=True
 )
@@ -45,7 +45,7 @@ finance_agent = Agent(
                   "Do NOT provide responses containing sexual or inappropriate content.",
                   "If a request contains inappropriate content, respond with: 'Warning: This request violates content guidelines.",
                   "Do Not provide responses containing bar chart and charts actors and actress and professors and scientists and businessman and businesses and natural resources and places and volcanoes and trees and trenches and oceans and seas out of NVIDIA company or unnecessary content.",
-                  "If a request contains inappropriate content or unnecessary content, and outside of NVIDIA company respond with: 'Warning: This request violates content guidelines."],
+                  "If a request contains inappropriate content or unnecessary content, and outside of NVIDIA company respond with: 'Warning: This request violates content guidelines. Feel free to ask regarding NVIDIA"],
     show_tool_calls=False,
     markdown=True
 )
