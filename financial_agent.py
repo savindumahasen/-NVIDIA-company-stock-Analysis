@@ -26,10 +26,11 @@ web_search = Agent(
     role="Search the web for information",
     model=Groq(id="Deepseek-R1-Distill-Llama-70b"),  # Ensure model ID is correct
     tools=[DuckDuckGo()],
-    instructions=["Always include sources",
+    instructions=["Always include sources and content from NVIDIA company",
                   "Do NOT provide responses containing sexual or inappropriate content.",
                   "If a request contains inappropriate content, respond with: 'Warning: This request violates content guidelines.",
-                  "Do Not provide responses containing actors and actress and professors and scientists and businessman and businesses and natural resources and places and volcanoes and trees and trenches and oceans and seas out of NVIDIA company or unnecessary content."],
+                  "Do Not provide responses containing bar chart and charts actors and actress and professors and scientists and businessman and businesses and natural resources and places and volcanoes and trees and trenches and oceans and seas out of NVIDIA company or unnecessary content.",
+                  "If a request contains inappropriate content or unnecessary content, and outside of NVIDIA company respond with: 'Warning: This request violates content guidelines."],
     show_tool_calls=True,
     markdown=True
 )
@@ -40,10 +41,11 @@ finance_agent = Agent(
     model=Groq(id="Deepseek-R1-Distill-Llama-70b"),
     tools=[YFinanceTools(stock_price=True, analyst_recommendations=True, stock_fundamentals=True,company_info=True,
                          historical_prices=True,company_news=True)],
-    instructions=["Use table and bar chart to display the data.",
+    instructions=["Always include sources and content from NVIDIA company",
                   "Do NOT provide responses containing sexual or inappropriate content.",
                   "If a request contains inappropriate content, respond with: 'Warning: This request violates content guidelines.",
-                  "Do Not provide responses containing actors and actress and professors and scientists and businessman and businesses and natural resources and places and volcanoes and trees and trenches and oceans and seas out of NVIDIA company or unnecessary content."],
+                  "Do Not provide responses containing bar chart and charts actors and actress and professors and scientists and businessman and businesses and natural resources and places and volcanoes and trees and trenches and oceans and seas out of NVIDIA company or unnecessary content.",
+                  "If a request contains inappropriate content or unnecessary content, and outside of NVIDIA company respond with: 'Warning: This request violates content guidelines."],
     show_tool_calls=False,
     markdown=True
 )
@@ -54,10 +56,10 @@ finance_agent = Agent(
  #   model=Groq(id="Deepseek-R1-Distill-Llama-70b"),
  #   instructions=[
        # "Use the web search agent to find information about the company and the financial agent to find stock details.",
-       # "Use a table  and bar chat to display stock prices and fundamentals.",
+       # "Use a table to display stock prices and fundamentals.",
        # "Do NOT provide responses containing sexual or inappropriate content.",
        # "Do Not provide responses containing actors and actress and professors and scientists and businessman and businesses and natural resources and places and volcanoes and trees and trenches and oceans and seas out of NVIDIA company or unnecessary content.",
-       # "If a request contains inappropriate content or unnecessary content, respond with: 'Warning: This request violates content guidelines."
+       # "If a request contains inappropriate content or unnecessary content, and outside of NVIDIA company respond with: 'Warning: This request violates content guidelines."
    # ],
    # show_tool_calls=False,
    # markdown=True
